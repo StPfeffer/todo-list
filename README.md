@@ -8,6 +8,7 @@ A simple yet powerful ToDo application that helps you manage your tasks efficien
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Docker Setup](#docker-setup)
 - [Usage](#usage)
   - [Running the Application](#running-the-application)
 - [Technologies Used](#technologies-used)
@@ -100,7 +101,7 @@ MongoDB: The MongoDB database.
 ## Technologies Used
 
 - **Frontend**: React.js, Next.js, TailwindCSS
-- **Backend**: Node.js, Express
+- **Backend**: Node.js, Axios
 - **Database**: MongoDB
 - **Language**: TypeScript
 - **Authentication**: JWT (JSON Web Tokens)
@@ -143,15 +144,3 @@ Please refer to the [CONTRIBUTING.md](docs/CONTRIBUTING.md) for more details.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-If you have any questions, feel free to reach out:
-
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
-
----
-
-Feel free to customize this `README.md` file to better fit your project!
