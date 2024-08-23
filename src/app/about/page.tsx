@@ -1,24 +1,38 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import { FaGithub } from 'react-icons/fa';
 
 const About: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>About Us</title>
-        <meta name="description" content="Learn more about our company and team." />
-      </Head>
-      <main className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold">About Us</h1>
-        <p className="mt-4 text-lg">
-          Welcome to our company! We are dedicated to providing the best services to our customers.
-          Our team is made up of professionals with years of experience in the industry.
-        </p>
-        <p className="mt-2 text-lg">
-          Our mission is to deliver high-quality products that meet the needs of our clients. 
-          We value integrity, excellence, and innovation in all that we do.
-        </p>
-      </main>
-    </>
+    <main className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold">About Me</h1>
+      <div className="mt-4 flex items-center">
+        <Image
+          src="/avatar.png"
+          alt="Your Name"
+          width={128}
+          height={128}
+          className="rounded-full"
+        />
+        <div className="ml-4">
+          <h2 className="text-xl font-semibold">Mateus Pfeffer</h2>
+          <p className="mt-2 text-lg">Backend Software Developer II</p>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 flex items-center text-blue-500 hover:underline"
+          >
+            <FaGithub className="mr-2" />
+            Visit my GitHub
+          </a>
+        </div>
+      </div>
+      <p className="mt-4 text-lg">
+        Welcome to my personal page! I am dedicated to providing the best services and
+        solutions in my field. With almost 6 of experience, I am passionate about delivering high-quality work and continuously learning and growing.
+      </p>
+    </main>
   );
 };
 
