@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import ToDoList from '@/components/todoList/TodoList';
-import ToDoInput from '@/components/todo/TodoInput';
+import ToDoInput from '@/components/todo/ToDoInput';
 
 interface ToDo {
   id: number;
