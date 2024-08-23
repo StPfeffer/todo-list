@@ -2,23 +2,18 @@
 
 import React, { useState } from 'react';
 import ToDoList from '@/components/todoList/TodoList';
-import ToDoInput from '@/components/todo/ToDoInput';
-
-interface ToDo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
+import ToDoInput from '@/components/todo/CreateToDo';
 
 const TodoPage: React.FC = () => {
   const [todos, setTodos] = useState<ToDo[]>([]);
 
-  const addTodo = (text: string) => {
+  const addTodo = (title: string) => {
     const newTodoItem: ToDo = {
       id: Date.now(),
-      text: text,
+      title: title,
       completed: false,
     };
+
     setTodos([...todos, newTodoItem]);
   };
 
@@ -33,13 +28,11 @@ const TodoPage: React.FC = () => {
   };
 
   return (
-    <>
-      <main className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">ToDo List</h1>
-        <ToDoInput addTodo={addTodo} />
-        <ToDoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
-      </main>
-    </>
+    <main className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">ToDo List</h1>
+      <ToDoInput addTodo={addTodo} />
+      <ToDoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
+    </main>
   );
 };
 

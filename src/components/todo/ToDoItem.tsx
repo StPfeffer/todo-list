@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ToDoItem: React.FC<ToDoItemProps> = ({
-  id, title: text, completed, toggleComplete, deleteTodo
+  todo: { id, title, completed }, toggleComplete, deleteTodo
 }) => {
   return (
     <li className="flex items-center justify-between mb-2">
@@ -10,7 +10,7 @@ const ToDoItem: React.FC<ToDoItemProps> = ({
         onClick={() => toggleComplete(id)}
         style={{ cursor: 'pointer' }}
       >
-        {text}
+        {title}
       </span>
       <button
         className="bg-red-600 text-white p-2"
