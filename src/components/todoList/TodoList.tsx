@@ -20,7 +20,7 @@ const ToDoList: React.FC<ToDoListProps> = ({ todos, toggleComplete, deleteTodo }
         <ToDoItem
           key={todo.id}
           id={todo.id}
-          text={todo.text}
+          title={todo.text}
           completed={todo.completed}
           toggleComplete={toggleComplete}
           deleteTodo={deleteTodo}
